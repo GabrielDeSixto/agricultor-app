@@ -69,7 +69,7 @@ fun LoginScreen() {
         Image(
             painter = painterResource(id = R.drawable.my_second_icon),
             contentDescription = "My Second Icon",
-            //modifier = Modifier.size(48.dp)
+            modifier = Modifier.size(400.dp)
         )
         Image(
             painter = painterResource(id = R.drawable.my_first_icon),
