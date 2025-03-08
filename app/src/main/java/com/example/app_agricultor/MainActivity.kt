@@ -11,8 +11,10 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
@@ -27,6 +29,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
@@ -64,19 +68,30 @@ fun LoginScreen() {
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Top
     ) {
         Image(
             painter = painterResource(id = R.drawable.my_second_icon),
             contentDescription = "My Second Icon",
-            modifier = Modifier.size(400.dp)
+            modifier = Modifier
+                .clip(RoundedCornerShape(16.dp))
+                .size(600.dp, 200.dp)
         )
         Image(
             painter = painterResource(id = R.drawable.my_first_icon),
             contentDescription = "My First Icon",
-            modifier = Modifier.size(120.dp)
+            modifier = Modifier
+                .size(300.dp, 100.dp)
+                //.align(Alignment.Center) // Centra la imagen
+                .offset(x = 0.dp, y = (-70).dp)
+                .alpha(0.5f)
         )
-        Spacer(modifier = Modifier.height(32.dp))
+        Spacer(modifier = Modifier.height(15.dp))
+        Text(
+            text = AnnotatedString("Comercializadora"),
+            style = TextStyle(fontSize = 25.sp)
+        )
+        Spacer(modifier = Modifier.height(15.dp))
         Text(
             text = AnnotatedString("Iniciar Sesión"),
             style = TextStyle(fontSize = 14.sp)
@@ -85,7 +100,8 @@ fun LoginScreen() {
             value = username,
             onValueChange = { username = it },
             label = { Text("Usuario") },
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(90.dp),
         )
         Spacer(modifier = Modifier.height(16.dp))
         OutlinedTextField(
