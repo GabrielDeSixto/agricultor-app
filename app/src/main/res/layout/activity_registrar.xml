@@ -31,7 +31,9 @@
         android:layout_height="0dp"
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
-        app:layout_constraintTop_toBottomOf="@+id/topLayout">
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -39,98 +41,99 @@
 
             <Button
                 android:id="@+id/buttonRegister"
+                style="@style/EditTextHintBlack"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
-                android:text="! Registrar ¡"
                 android:background="@color/green"
-                android:textColor="@color/white"
                 android:fontFamily="Inter"
-                android:textSize="400sp"
-                style="@style/EditTextHintBlack"
+                android:text="! Registrar ¡"
                 android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="400sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/editTextName"
+                style="@style/EditTextHintBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:hint="Nombre"
                 android:inputType="textPersonName"
-                style="@style/EditTextHintBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
 
             <EditText
                 android:id="@+id/editTextLastName"
+                style="@style/EditTextHintBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Apellido Paterno"
                 android:inputType="textPersonName"
-                style="@style/EditTextHintBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
             <EditText
                 android:id="@+id/editTextSecondLastName"
+                style="@style/EditTextHintBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Apellido Materno"
                 android:inputType="textPersonName"
-                style="@style/EditTextHintBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
 
             <EditText
                 android:id="@+id/editTextEmail"
+                style="@style/EditTextHintBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Correo Electrónico"
                 android:inputType="textEmailAddress"
-                style="@style/EditTextHintBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextSecondLastName" />
 
             <EditText
                 android:id="@+id/editTextPhone"
+                style="@style/EditTextHintBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Teléfono"
                 android:inputType="phone"
-                style="@style/EditTextHintBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
             <EditText
                 android:id="@+id/editTextAddress"
+                style="@style/EditTextHintBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Dirección"
                 android:inputType="textPostalAddress"
-                style="@style/EditTextHintBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
             <EditText
                 android:id="@+id/editTextFoto"
+                style="@style/EditTextHintBlack"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:hint="Foto"
                 android:inputType="textPostalAddress"
-                style="@style/EditTextHintBlack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextAddress" />
